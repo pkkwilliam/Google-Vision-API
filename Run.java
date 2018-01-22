@@ -6,6 +6,18 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Scanner;
 
+/*
+LANDMARK_DETECTION
+FACE_DETECTION
+LOGO_DETECTION
+LALEL_DETECTION
+TEXT_DETECTION
+
+"type": "WEB_DETECTION",
+          "maxResults": 2
+
+*/
+
 public class Run{
 	private static final String TARGET_URL =
             "https://vision.googleapis.com/v1/images:annotate?";
@@ -21,7 +33,7 @@ public class Run{
     	BufferedWriter httpRequestBodyWriter = new BufferedWriter(new
         OutputStreamWriter(httpConnection.getOutputStream()));
 		httpRequestBodyWriter.write
-		("{\"requests\":  [{ \"features\":  [ {\"type\": \"WEB_DETECTION\""
+		("{\"requests\":  [{ \"features\":  [ {\"type\": \"Faces\""
 		+"}], \"image\": {\"source\": { \"imageUri\":"
 		+" \"http://www.chiwawadogs.net/wp-content/uploads/2013/06/chipuppy-e1380226702148.jpg\"}}}]}");
 		 httpRequestBodyWriter.close();
