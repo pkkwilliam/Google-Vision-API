@@ -33,9 +33,9 @@ public class Run{
     	BufferedWriter httpRequestBodyWriter = new BufferedWriter(new
         OutputStreamWriter(httpConnection.getOutputStream()));
 		httpRequestBodyWriter.write
-		("{\"requests\":  [{ \"features\":  [ {\"type\": \"Faces\""
+		("{\"requests\":  [{ \"features\":  [ {\"type\": \"WEB_DETECTION\""
 		+"}], \"image\": {\"source\": { \"imageUri\":"
-		+" \"http://www.chiwawadogs.net/wp-content/uploads/2013/06/chipuppy-e1380226702148.jpg\"}}}]}");
+		+" \"http://cdn2-www.dogtime.com/assets/uploads/gallery/golden-retriever-dogs-and-puppies/golden-retriever-dogs-puppies-10.jpg\"}}}]}");
 		 httpRequestBodyWriter.close();
 		 String response = httpConnection.getResponseMessage();
 		 if (httpConnection.getInputStream() == null) {
